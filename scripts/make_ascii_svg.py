@@ -43,26 +43,38 @@ INVERT = True                   # bright pixels -> dense glyphs (reads better on
 
 
 def to_grid(img: Image.Image) -> list[str]:
-    gray = img.convert("L")
-    arr = np.array(gray)
+    arr = np.array(img.convert("L")).astype(np.float32)
 
-    # Crop to the subject (anything that is not pure white) so the portrait
-    # fills the grid instead of the white margins.
-    mask = arr < WHITE_CUTOFF
-    ys, xs = np.where(mask)
+    # Foreground mask from the *unblurred* image: white == background.
+    fg = (arr < WHITE_CUTOFF).astype(np.float32)
+
+    # Crop to the subject so the portrait fills the grid.
+    ys, xs = np.where(fg > 0)
     if len(xs):
-        gray = gray.crop((xs.min(), ys.min(), xs.max() + 1, ys.max() + 1))
+        y0, y1, x0, x1 = ys.min(), ys.max() + 1, xs.min(), xs.max() + 1
+        arr, fg = arr[y0:y1, x0:x1], fg[y0:y1, x0:x1]
 
-    w, h = gray.size
+    h, w = arr.shape
     rows = int(round(h / w * COLS * (CHAR_W / LINE_H)))
     rows = max(1, min(rows, MAX_ROWS))
 
-    if BLUR:
-        gray = gray.filter(ImageFilter.GaussianBlur(BLUR))
-    small = np.array(gray.resize((COLS, rows), Image.BOX)).astype(np.float32)
+    # Normalized convolution: blur/downscale tone using foreground pixels only,
+    # so the white background never bleeds into the subject's edge.
+    def shrink(a: np.ndarray) -> np.ndarray:
+        # 8-bit grayscale (GaussianBlur does not support float images)
+        im = Image.fromarray(np.clip(a, 0, 255).astype(np.uint8), mode="L")
+        if BLUR:
+            im = im.filter(ImageFilter.GaussianBlur(BLUR))
+        return np.array(im.resize((COLS, rows), Image.BOX), dtype=np.float32)
+
+    tone_sum = shrink(arr * fg)
+    coverage = shrink(fg * 255.0) / 255.0       # 0..1 = fraction of subject in cell
+    with np.errstate(divide="ignore", invalid="ignore"):
+        small = np.where(coverage > 0, tone_sum / np.maximum(coverage, 1e-6), 255.0)
+    is_bg = coverage < 0.5                      # mostly background -> space
 
     # High contrast: stretch the subject's own luminance range onto the ramp.
-    subject = small[small < WHITE_CUTOFF]
+    subject = small[~is_bg]
     lo, hi = (np.percentile(subject, 2), np.percentile(subject, 98)) if subject.size else (0, 255)
     hi = max(hi, lo + 1)
     dark = np.clip((hi - small) / (hi - lo), 0.0, 1.0)   # 0 = light, 1 = dark
@@ -75,7 +87,7 @@ def to_grid(img: Image.Image) -> list[str]:
     if invert:
         # On a dark background bright pixels read better as dense glyphs.
         dark = 1.0 - dark
-    dark[small >= WHITE_CUTOFF] = 0.0                     # background -> space
+    dark[is_bg] = 0.0                                     # background -> space
 
     idx = np.rint(dark * (len(RAMP) - 1)).astype(int)
     return ["".join(RAMP[i] for i in row).rstrip() for row in idx]
