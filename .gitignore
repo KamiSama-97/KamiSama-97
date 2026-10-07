@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+source-prepped.png
+
+# local previews
+preview*.png
+*-tmp.svg
+source-photo.*

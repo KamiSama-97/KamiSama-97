@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="490" height="424" viewBox="0 0 490 424" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, &quot;Liberation Mono&quot;, monospace" font-size="13">
+  <rect x="0.5" y="0.5" width="489" height="423" rx="8" fill="#0d1117" stroke="#30363d"/>
+  <path d="M0.5 8.5 a8 8 0 0 1 8 -8 h473 a8 8 0 0 1 8 8 v28 h-489 z" fill="#161b22"/>
+  <line x1="0.5" y1="36.5" x2="489.5" y2="36.5" stroke="#30363d"/>
+  <circle cx="18" cy="18.0" r="6" fill="#ff5f56"/>
+  <circle cx="38" cy="18.0" r="6" fill="#ffbd2e"/>
+  <circle cx="58" cy="18.0" r="6" fill="#27c93f"/>
+  <text x="245.0" y="23.0" text-anchor="middle" fill="#8b949e" font-size="12">KamiSama-97@github: ~</text>
+  <g opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.00s" dur="0.45s" fill="freeze"/><animateTransform attributeName="transform" type="translate" from="0 8" to="0 0" begin="0.00s" dur="0.45s" fill="freeze"/>
+    <text x="24" y="67"><tspan fill="#3fb950">KamiSama-97@github</tspan><tspan fill="#c9d1d9">:</tspan><tspan fill="#d2a8ff">~</tspan><tspan fill="#c9d1d9">$ neofetch</tspan></text>
+  </g>
+  <g opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.12s" dur="0.45s" fill="freeze"/><animateTransform attributeName="transform" type="translate" from="0 8" to="0 0" begin="0.12s" dur="0.45s" fill="freeze"/>
+    <text x="24" y="91" fill="#8b949e">----------------------------------------------------</text>
+  </g>
+  <g opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.24s" dur="0.45s" fill="freeze"/><animateTransform attributeName="transform" type="translate" from="0 8" to="0 0" begin="0.24s" dur="0.45s" fill="freeze"/>
+    <text x="24" y="115" fill="#58a6ff" font-weight="bold">Now</text>
+    <text x="128" y="115" fill="#c9d1d9">Senior Genesys Cloud Engineer</text>
+  </g>
+  <g opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.36s" dur="0.45s" fill="freeze"/><animateTransform attributeName="transform" type="translate" from="0 8" to="0 0" begin="0.36s" dur="0.45s" fill="freeze"/>
+    <text x="128" y="139" fill="#c9d1d9">@ Sabio Group · Santander Openbank</text>
+  </g>
+  <g opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.48s" dur="0.45s" fill="freeze"/><animateTransform attributeName="transform" type="translate" from="0 8" to="0 0" begin="0.48s" dur="0.45s" fill="freeze"/>
+    <text x="24" y="163" fill="#58a6ff" font-weight="bold">Prev</text>
+    <text x="128" y="163" fill="#c9d1d9">Lead Full-Stack Developer @ GoConcept</text>
+  </g>
+  <g opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.60s" dur="0.45s" fill="freeze"/><animateTransform attributeName="transform" type="translate" from="0 8" to="0 0" begin="0.60s" dur="0.45s" fill="freeze"/>
+    <text x="128" y="187" fill="#c9d1d9">Node.js · Go · Java · React · PostGIS</text>
+  </g>
+  <g opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.72s" dur="0.45s" fill="freeze"/><animateTransform attributeName="transform" type="translate" from="0 8" to="0 0" begin="0.72s" dur="0.45s" fill="freeze"/>
+    <text x="24" y="211" fill="#58a6ff" font-weight="bold">Stack</text>
+    <text x="128" y="211" fill="#c9d1d9">Genesys Cloud · Architect · Data Actions</text>
+  </g>
+  <g opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.84s" dur="0.45s" fill="freeze"/><animateTransform attributeName="transform" type="translate" from="0 8" to="0 0" begin="0.84s" dur="0.45s" fill="freeze"/>
+    <text x="128" y="235" fill="#c9d1d9">TypeScript · Node.js · Python · Go · Java</text>
+  </g>
+  <g opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.96s" dur="0.45s" fill="freeze"/><animateTransform attributeName="transform" type="translate" from="0 8" to="0 0" begin="0.96s" dur="0.45s" fill="freeze"/>
+    <text x="128" y="259" fill="#c9d1d9">Terraform · CX as Code · Lambda · Docker</text>
+  </g>
+  <g opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.08s" dur="0.45s" fill="freeze"/><animateTransform attributeName="transform" type="translate" from="0 8" to="0 0" begin="1.08s" dur="0.45s" fill="freeze"/>
+    <text x="128" y="283" fill="#c9d1d9">PostgreSQL · PostGIS · MongoDB · Redis</text>
+  </g>
+  <g opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.20s" dur="0.45s" fill="freeze"/><animateTransform attributeName="transform" type="translate" from="0 8" to="0 0" begin="1.20s" dur="0.45s" fill="freeze"/>
+    <text x="24" y="307" fill="#58a6ff" font-weight="bold">Highlights</text>
+    <text x="128" y="307" fill="#c9d1d9">- MCP server for Genesys Cloud: 400+ tools</text>
+  </g>
+  <g opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.32s" dur="0.45s" fill="freeze"/><animateTransform attributeName="transform" type="translate" from="0 8" to="0 0" begin="1.32s" dur="0.45s" fill="freeze"/>
+    <text x="128" y="331" fill="#c9d1d9">- Platform audits: 2 weeks -&gt; 10 minutes</text>
+  </g>
+  <g opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.44s" dur="0.45s" fill="freeze"/><animateTransform attributeName="transform" type="translate" from="0 8" to="0 0" begin="1.44s" dur="0.45s" fill="freeze"/>
+    <text x="128" y="355" fill="#c9d1d9">- Full org migrations in ~2 hours</text>
+  </g>
+  <g opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.56s" dur="0.45s" fill="freeze"/><animateTransform attributeName="transform" type="translate" from="0 8" to="0 0" begin="1.56s" dur="0.45s" fill="freeze"/>
+    <text x="128" y="379" fill="#c9d1d9">- 7 projects across 6 countries</text>
+  </g>
+  <g opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.68s" dur="0.45s" fill="freeze"/><animateTransform attributeName="transform" type="translate" from="0 8" to="0 0" begin="1.68s" dur="0.45s" fill="freeze"/>
+    <text x="24" y="403"><tspan fill="#3fb950">KamiSama-97@github</tspan><tspan fill="#c9d1d9">:</tspan><tspan fill="#d2a8ff">~</tspan><tspan fill="#c9d1d9">$ </tspan></text>
+    <rect x="208.8" y="391" width="8" height="15" fill="#c9d1d9"><animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.5;1" dur="1.1s" begin="2.13s" repeatCount="indefinite"/></rect>
+  </g>
+</svg>
