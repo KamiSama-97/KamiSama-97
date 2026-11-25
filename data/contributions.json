@@ -1,12 +1,12 @@
 {
   "user": "KamiSama-97",
-  "fetched_at": "2026-11-24",
+  "fetched_at": "2026-11-25",
   "from": "2025-11-23",
-  "to": "2026-11-24",
+  "to": "2026-11-25",
   "stats": {
-    "total": 1137,
-    "current_streak": 49,
-    "longest_streak": 49,
+    "total": 1140,
+    "current_streak": 51,
+    "longest_streak": 51,
     "best_day": {
       "date": "2026-11-03",
       "count": 137
@@ -24,7 +24,7 @@
       "2026-08": 12,
       "2026-09": 115,
       "2026-10": 470,
-      "2026-11": 301
+      "2026-11": 304
     }
   },
   "days": [
@@ -1860,8 +1860,13 @@
     },
     {
       "date": "2026-11-24",
-      "level": 0,
-      "count": 0
+      "level": 1,
+      "count": 1
+    },
+    {
+      "date": "2026-11-25",
+      "level": 1,
+      "count": 2
     }
   ]
 }
